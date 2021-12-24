@@ -1,15 +1,15 @@
-# Write a program that outputs the factorial of the numbers 5, 6, 7, and 8.
-g = 0
-def factorial(num)
-  factorials_array = []
-  num.times do 
-    factorials_array.push num
-    num -= 1
+# Write a program that calculates the squares of 3 float numbers of your choosing and outputs the result to the screen.
+
+def square(num)
+  if num.is_a?(Float)
+    output = num ** 2
+    puts output
+  else
+    puts "Your number is not a float!"
   end
-  return factorials_array.inject(:*)
 end
 
-puts factorial(5)
-puts factorial(6)
-puts factorial(7)
-puts factorial(8)
+square(3.33)
+square(2.222)
+square(9.0)
+square(0.03)
