@@ -9,8 +9,36 @@
 
 # # Exercises marked as challenges can be very difficult. Don't get discouraged if you can't complete it, but do make the attempt. Even if you can't solve the exercise, be sure to read through the solution, if one is provided.
 
+# contact_data = ["joe@email.com", "123 Main st.", "555-123-4567"]
+# contacts = {"Joe Smith" => {}}
+# data_types = [:email, :address, :phone]
+
+# contacts.each do |name, info|
+#     data_types.each do |data|
+#     info[data] = contact_data.shift
+#     end
+# end
+
+# p contacts
+
+# I need to revisit this exercise as the above is basically copied from the answer. I'll look at it again and try it again.
+
+# Revisited, but need to revisit again.
+
 contact_data = [["joe@email.com", "123 Main st.", "555-123-4567"],
             ["sally@email.com", "404 Not Found Dr.", "123-234-3454"]]
 
 contacts = {"Joe Smith" => {}, "Sally Johnson" => {}}
+data_types = [:email, :address, :phone]
 
+contact_data.flatten!
+
+contacts.each do |name, info|
+    data_types.each do |data|
+    info[data] = contact_data.shift
+    end
+end
+
+p contacts
+
+# This definitely isn't the bonus they were looking for, but it works. I'll still revisit to do the non-hacky version later though.
